@@ -2,6 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 body {
@@ -9,10 +10,10 @@ body {
 }
 
 .top-section-wrapper {
+  overflow: hidden;
   background-color: #001d37;
   padding-left: 16px;
   padding-right: 16px;
-  overflow: hidden;
 }
 
 .top-section {
@@ -30,9 +31,8 @@ body {
 }
 
 .top-section h1 {
-  margin: 0;
   font-size: 4rem;
-  font-weight: 700;
+  margin: 0;
   line-height: 97.3%;
   max-width: 525px;
 }
@@ -52,9 +52,9 @@ body {
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 600;
-  background: #475aff;
+  background-color: #475aff;
   border: 2px solid #475aff;
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 13px 25px;
   border-radius: 1000px;
@@ -63,7 +63,7 @@ body {
 }
 
 .our-btn:hover {
-  background: #2e40e2;
+  background-color: #2e40e2;
   border: 2px solid #2e40e2;
 }
 
@@ -74,8 +74,8 @@ body {
 
 .our-btn--outline:hover {
   background-color: white;
-  color: #2e40e2;
-  border: 2px solid #2e40e2;
+  color: #475aff;
+  border: 2px solid white;
 }
 
 .utility-mr {
@@ -85,6 +85,10 @@ body {
 .intro-feature {
   padding: 33px 25px;
   border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.intro-feature p {
+  margin: 0;
   font-size: 1.0625rem;
 }
 
@@ -99,10 +103,22 @@ body {
   row-gap: 16px;
 }
 
+@media screen and (min-width: 580px) {
+  .intro-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .intro-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .circle {
-  height: 617px;
   width: 617px;
-  background-color: #d660ff;
+  height: 617px;
+  background: #d660ff;
   opacity: 0.85;
   border-radius: 50%;
   filter: blur(150px);
@@ -112,9 +128,9 @@ body {
 }
 
 .circle-two {
-  height: 617px;
   width: 617px;
-  background-color: #6089ff;
+  height: 617px;
+  background: #6079ff;
   opacity: 0.85;
   border-radius: 50%;
   filter: blur(150px);
@@ -141,14 +157,14 @@ body {
 
 .pet-filter {
   color: #9f9f9f;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .pet-filter button {
   background-color: transparent;
   border: none;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #9f9f9f;
 }
 
@@ -162,7 +178,7 @@ body {
 
 .list-of-pets {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   column-gap: 34px;
   row-gap: 16px;
 }
@@ -170,10 +186,9 @@ body {
 .pet-card {
   overflow: hidden;
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 165px 1fr;
   border-radius: 20px;
   border: 1px solid #f3f3f3;
-  background: #fff;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.08);
 }
 
@@ -209,6 +224,7 @@ body {
 .pet-age {
   color: #a2a2a2;
   font-size: 0.85rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -237,7 +253,7 @@ body {
   }
 
   .page-section {
-    padding: 130px 60px;
+    padding: 130px 16px;
   }
 
   .intro-buttons {
@@ -251,21 +267,5 @@ body {
   .top-section {
     padding-top: 139px;
     padding-bottom: 139px;
-  }
-}
-
-@media screen and (min-width: 580px) {
-  .intro-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .intro-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 16px;
   }
 }
